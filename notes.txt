@@ -1,0 +1,15 @@
+While the insert function initially is the faster of the two. The first two arrays
+it runs through it is more than two times faster than the append function. So with smaller
+data amounts the unshift() function works faster, but as the data amount increases the time
+it takes the unshift to execute grows exponentially. The push() function on the other hand
+has consistent growth in time because the amount of time to process each piece of data does not 
+change as it does in the insert function. The doublerAppend scales at O(1). The doublerInsert
+scales at O(n). The doublerAppend function scales better. We can see this in the table as the 
+amount of data increases the time it takes to run does not grow at the same rate as the 
+doublerInsert function.
+
+The doublerInsert function is slower because it uses the unshift() method. This method requires
+the value of i to be placed at the beginning of the new array everytime the for looop runs. Because of 
+this it also has to move all existing values in the new array down one index. So it not only moves the 
+new value of i to the array, but it also moves all existing data. Or in other words the more it moves 
+to the new array the more data it has to reindex, making each interation longer process.
